@@ -14,6 +14,7 @@ while ((input = Console.ReadLine()) != "Generate")
             if (key.Contains(substring))
             {
                 Console.WriteLine($"{key} contains {substring}.");
+                Console.WriteLine($"{key} contains {substring}");
             }
             else
             {

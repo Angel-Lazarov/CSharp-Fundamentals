@@ -12,11 +12,10 @@ while ((input = Console.ReadLine()) != "Sail")
     int gold = int.Parse(tokens[2]);
 
 
-   // bool IsNewTown = towns.Any(x => x.Name == name);
+    bool IsNewTown = towns.Any(x => x.Name == name);
     Town currentTown = towns.FirstOrDefault(x => x.Name == name);
 
-    if(currentTown == null)
-  //  if (!IsNewTown)
+    if (!IsNewTown)
     {
         Town town = new Town(name, people, gold);
         towns.Add(town);

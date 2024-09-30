@@ -16,7 +16,7 @@ result.AppendLine("</article>");
 
 string comment = string.Empty;
 
-while ((comment = Console.ReadLine())!="end of comments") 
+while ((comment = Console.ReadLine()) != "end of comments")
 {
     result.AppendLine("<div>");
     result.AppendLine("\t" + comment);
@@ -24,3 +24,4 @@ while ((comment = Console.ReadLine())!="end of comments")
 }
 
 Console.WriteLine(result);
+

@@ -15,7 +15,7 @@ MatchCollection matchedNames = Regex.Matches(names, patern);
 
 //Console.WriteLine(matches.Count);
 
-foreach (Match match in matchedNames) 
+foreach (Match match in matchedNames)
 {
     //Console.WriteLine($"There is a match!: {match.Groups["firstName"]} {match.Groups[2]}");
     //Console.WriteLine($"With first name: {match.Groups["firstName"]}");

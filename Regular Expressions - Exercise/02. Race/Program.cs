@@ -1,51 +1,59 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 
-List<Participant> participants = new List<Participant>();
 string[] names = Console.ReadLine().Split(", ");
+
+List<Participiant> participiants = new List<Participiant>();
 
 foreach (string name in names)
 {
-        participants.Add(new Participant(name));
+    participiants.Add(new Participiant(name));
 }
+
+
 
 string input = string.Empty;
 while ((input = Console.ReadLine()) != "end of race")
 {
-    string racer = string.Empty;
-    int distance = 0;
 
-    foreach (char letter in input)
+    StringBuilder nameBuilder = new StringBuilder();
+    string paternLeters = @"[A-Za-z]";
+    foreach (Match match in Regex.Matches(input, paternLeters))
     {
-        if (char.IsLetter(letter))
-        {
-            racer += letter;
-        }
-        else if (char.IsDigit(letter))
-        {
-            distance += int.Parse(letter.ToString());
-        }
+        nameBuilder.Append(match.Value);
+    }
+    string currentName = nameBuilder.ToString();
+
+    ulong distance = 0;
+    string paternNumbers = @"\d";
+    foreach (Match match in Regex.Matches(input, paternNumbers))
+    {
+        distance += ulong.Parse(match.Value);
     }
 
-    if (participants.ContainsKey(racer))
+    foreach (Participiant participiant in participiants)
     {
-        participants[racer].Distance+=distance;
+        if (participiant.Name == currentName)
+        {
+            participiant.Distance += distance;
+        }
     }
 }
 
-StringBuilder sb = new StringBuilder();
-foreach (var person in participants)
-{
-    sb.Append($"place:{person.Key}");
-}
-Console.WriteLine(sb);
+participiants = participiants.OrderByDescending(x => x.Distance).Take(3).ToList();
 
-class Participant
+Console.WriteLine($"1st place: {participiants[0].Name}");
+Console.WriteLine($"2nd place: {participiants[1].Name}");
+Console.WriteLine($"3rd place: {participiants[2].Name}");
+
+
+class Participiant
 {
-    public Participant(string name)
+    public Participiant(string name)
     {
         Name = name;
     }
-
     public string Name { get; set; }
-    public int Distance { get; set; }
+
+    public ulong Distance { get; set; }
 }

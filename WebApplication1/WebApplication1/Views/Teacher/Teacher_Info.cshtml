@@ -1,0 +1,37 @@
+﻿@using MySchoolWebApplication.ViewModels.TeacherViewModels
+@model List<TeacherViewModel>
+<style>
+	table, th, td {
+		border: 2px solid black;
+		border-collapse: collapse;
+	}
+</style>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="text-center">
+	<h3><b>Списък на Преподавателите</b></h3>
+	<p><b>Информация за преподавателите</b></p>
+</div>
+
+<table style="background-color:lightgray">
+	<tr>
+		<th class="text-center">Id</th>
+		<th class="text-center">Име</th>
+		<th class="text-center">Курсове</th>
+
+	</tr>
+
+	@foreach (TeacherViewModel teacher in Model)
+	{
+		<tr>
+			<td class="text-center">@teacher.Id</td>
+			<td>@teacher.Name</td>
+			<td>@teacher.CourseName</td>
+		</tr>
+	}
+
+</table>

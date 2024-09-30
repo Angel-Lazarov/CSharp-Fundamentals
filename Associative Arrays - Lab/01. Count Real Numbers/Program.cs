@@ -1,23 +1,20 @@
-﻿
-using System.Net.Sockets;
+﻿int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-double[] numbers = Console.ReadLine().Split().Select(double.Parse).ToArray();
+SortedDictionary<int, int> counts = new SortedDictionary<int, int>();
 
-SortedDictionary <double, int> counts = new SortedDictionary<double, int>();
-
-foreach (var number in numbers) 
+foreach (int number in numbers)
 {
     if (counts.ContainsKey(number))
     {
-        counts[number] += 1;
+        counts[number]++;
     }
-    else 
+    else
     {
-    counts.Add(number, 1);
+       counts.Add(number, 1);
     }
 }
-foreach (var item in counts)
+
+foreach (var number in counts)
 {
-    Console.WriteLine($"{item.Key} -> {item.Value}");
+    Console.WriteLine($"{number.Key} -> {number.Value}");
 }
-// shutdown /s /t 52440

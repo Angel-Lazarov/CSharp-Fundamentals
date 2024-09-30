@@ -5,7 +5,7 @@ int sum = 0;
 
 foreach (char ch in input)
 {
-    if (ch > first && ch < second)
+    if (ch > first && ch < second) 
     {
         sum += ch;
     }

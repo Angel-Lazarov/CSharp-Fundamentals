@@ -1,12 +1,14 @@
-﻿using System.Text.RegularExpressions;
+﻿
+using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 //string patern = @">>(?<name>[A-z]+)<<(?<price>\d+\.\d+|\d+)!(?<count>\d+)";
 string patern = @">>(?<name>[A-Za-z]+)<<(?<price>\d+\.\d+|\d+)!(?<count>\d+)";
 
 decimal sum = 0;
+string input = string.Empty;
 List<string> products = new List<string>();
 
-string input = string.Empty;
 while ((input = Console.ReadLine()) != "Purchase")
 {
 

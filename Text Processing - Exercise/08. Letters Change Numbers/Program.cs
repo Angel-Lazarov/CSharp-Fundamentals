@@ -20,7 +20,7 @@ foreach (string str in input)
         decimal position = decimal.Parse((firstLetter - 'A' + 1).ToString());
         result = number / position;
     }
-    else if (char.IsLower(firstLetter))
+    else if (char.IsLower(firstLetter)) 
     {
         int position = int.Parse((firstLetter - 'a' + 1).ToString());
         result = number * position;

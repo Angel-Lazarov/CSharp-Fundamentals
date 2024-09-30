@@ -1,19 +1,4 @@
-﻿//4.11.23 - 18:07
-
-/*
- 
-2
-Tedy-SoftUni
-Tanya-CloneClub
-John->SoftUni
-George->SoftUni
-Helena->CloneClub
-Cossima->CloneClub
-end of assignment
-
- */
-
-
+﻿
 int countTeams = int.Parse(Console.ReadLine());
 
 List<Team> teams = new List<Team>();
@@ -40,13 +25,8 @@ for (int i = 0; i < countTeams; i++)
         Console.WriteLine($"{teamCreator} cannot create another team!");
         continue;
     }
-
-    //if (!isTeamExist && isCreatorfree)  //проверка дали съществува отбор с такова име и дали създателя има други отбори
-    //{
     teams.Add(team);
     Console.WriteLine($"Team {team.TeamName} has been created by {team.CreatorName}!");
-    //}
-
 }
 
 string input = string.Empty;
@@ -73,19 +53,22 @@ while ((input = Console.ReadLine()) != "end of assignment")
         continue;
     }
 
-    if (!isMemberInTeam && isTeamExist)
-    {
-        foreach (Team currentTeam in teams)
-        {
-            if (currentTeam.TeamName == teamToJoin)
-            {
-                currentTeam.Members.Add(memberName);
-                break;
-            }
-        }
-    }
-}
 
+    //намираме отбора по име и му добавяме member-а
+    teams.Find(x=>x.TeamName == teamToJoin).Members.Add(memberName);
+
+    //if (!isMemberInTeam && isTeamExist)
+    //{
+    //    foreach (Team currentTeam in teams)
+    //    {
+    //        if (currentTeam.TeamName == teamToJoin)
+    //        {
+    //            currentTeam.Members.Add(memberName);
+    //            break;
+    //        }
+    //    }
+    //}
+}
 
 teams = teams.OrderByDescending(x => x.Members.Count).ThenBy(x => x.TeamName).ToList();
 
@@ -165,4 +148,27 @@ class Team
     public string TeamName { get; set; }
     public string CreatorName { get; set; }
     public List<string> Members { get; set; }
+
+    //public override string ToString()
+    //{
+    //    return $"{TeamName}\n" +
+    //           $"- {CreatorName}\n" +
+    //           $"{CreateMembersList()}";
+    //}
+
+    //public string CreateMembersList()
+    //{
+    //    Members = Members.OrderBy(x => x).ToList();
+
+    //    string mem = string.Empty;
+
+    //    for (int i = 0; i < Members.Count - 1; i++)
+    //    {
+    //        mem += $"-- {Members[i]}\n";
+    //    }
+
+    //    mem += $"-- {Members[Members.Count - 1]}";
+
+    //    return mem;
+    //}
 }

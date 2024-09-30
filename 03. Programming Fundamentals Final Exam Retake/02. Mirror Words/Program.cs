@@ -39,7 +39,7 @@ else
     {
         Console.WriteLine("No mirror words!");
     }
-    else 
+    else
     {
         foreach (Pair pair in pairs)
         {

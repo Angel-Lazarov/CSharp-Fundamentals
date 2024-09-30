@@ -1,0 +1,28 @@
+.green {
+background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+.purple {
+    background-color: purple;
+}
+.orange {
+background-color: orange;
+}
+div{
+display: inline-block;
+margin: auto;
+}
+div:hover{
+visibility: hidden;
+cursor: pointer;
+}
+.site-content{
+    width: 200px;
+}
+
+ 

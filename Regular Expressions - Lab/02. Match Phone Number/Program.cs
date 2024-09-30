@@ -9,9 +9,9 @@ MatchCollection matches = regex.Matches(text);
 
 List<string> list = new List<string>();
 
-foreach (Match match in matches) 
+foreach (Match match in matches)
 {
-    list.Add(match.Value); 
+    list.Add(match.Value);
 }
 
 Console.WriteLine(string.Join(", ", list));

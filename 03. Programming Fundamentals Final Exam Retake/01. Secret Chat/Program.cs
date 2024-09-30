@@ -1,8 +1,9 @@
-﻿string encryptedMessage = Console.ReadLine();
+﻿
+string encryptedMessage = Console.ReadLine();
 
 string input = string.Empty;
 
-while ((input = Console.ReadLine()) != "Reveal")
+while ((input=Console.ReadLine()) != "Reveal")
 {
     string[] command = input.Split(":|:");
 
@@ -21,13 +22,13 @@ while ((input = Console.ReadLine()) != "Reveal")
             string reversedCut = new string(subString.Reverse().ToArray());
             encryptedMessage += reversedCut;
         }
-        else
-        {
+        else 
+        { 
             Console.WriteLine("error");
             continue;
         }
     }
-    else if (command[0] == "ChangeAll")
+    else if (command[0] == "ChangeAll") 
     {
         string substring = command[1];
         string replacement = command[2];

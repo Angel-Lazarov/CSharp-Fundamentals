@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Reverse Strings", "01. Reverse Strings\01. Reverse Strings.csproj", "{9C7AC880-B7A9-4524-BDD7-223902100752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Repeat Strings", "02. Repeat Strings\02. Repeat Strings.csproj", "{EFE0A738-A9DD-49AC-8687-9DAA0419ED41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Substring", "03. Substring\03. Substring.csproj", "{06CEC290-A618-4BB8-8E31-5F70CD9E5C80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Text Filter", "04. Text Filter\04. Text Filter.csproj", "{44947A81-9B85-487B-B2A2-73D7F6386AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Digits, Letters and Other", "05. Digits, Letters and Other\05. Digits, Letters and Other.csproj", "{51848683-9316-4987-A682-8DFA550D0D39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Digits, Letters and Other - v2 LINQ", "05. Digits, Letters and Other - v2 LINQ\05. Digits, Letters and Other - v2 LINQ.csproj", "{AA5AA1D3-6F7D-4EF1-B812-99349B87A1AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C7AC880-B7A9-4524-BDD7-223902100752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7AC880-B7A9-4524-BDD7-223902100752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7AC880-B7A9-4524-BDD7-223902100752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7AC880-B7A9-4524-BDD7-223902100752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE0A738-A9DD-49AC-8687-9DAA0419ED41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE0A738-A9DD-49AC-8687-9DAA0419ED41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE0A738-A9DD-49AC-8687-9DAA0419ED41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE0A738-A9DD-49AC-8687-9DAA0419ED41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CEC290-A618-4BB8-8E31-5F70CD9E5C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CEC290-A618-4BB8-8E31-5F70CD9E5C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CEC290-A618-4BB8-8E31-5F70CD9E5C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CEC290-A618-4BB8-8E31-5F70CD9E5C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44947A81-9B85-487B-B2A2-73D7F6386AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44947A81-9B85-487B-B2A2-73D7F6386AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44947A81-9B85-487B-B2A2-73D7F6386AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44947A81-9B85-487B-B2A2-73D7F6386AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51848683-9316-4987-A682-8DFA550D0D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51848683-9316-4987-A682-8DFA550D0D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51848683-9316-4987-A682-8DFA550D0D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51848683-9316-4987-A682-8DFA550D0D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5AA1D3-6F7D-4EF1-B812-99349B87A1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5AA1D3-6F7D-4EF1-B812-99349B87A1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5AA1D3-6F7D-4EF1-B812-99349B87A1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5AA1D3-6F7D-4EF1-B812-99349B87A1AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C911FC0-414B-4081-901C-344969AC44D9}
+	EndGlobalSection
+EndGlobal

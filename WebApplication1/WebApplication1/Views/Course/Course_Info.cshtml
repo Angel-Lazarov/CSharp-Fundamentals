@@ -1,0 +1,30 @@
+﻿@using MySchoolWebApplication.ViewModels.CourseViewModels
+@model List<CourseViewModel>
+<style>
+	table, th, td {
+		border: 2px solid black;
+	}
+</style>
+
+<div class="text-center">
+	<h3><b>Списък на Курсове</b></h3>
+	<p><b>Информация за курсовете</b></p>
+</div>
+
+
+<table>
+	<tr>
+		<th class="text-center">Id</th>
+		<th class="text-center">Име</th>
+		<th class="text-center">Преподаватели</th>
+	</tr>
+	@foreach (CourseViewModel course in Model)
+	{
+		<tr>
+
+			<td class="text-center">@course.Id</td>
+			<td>@course.Name</td>
+			<td>@course.TeacherName</td>
+		</tr>
+	}
+</table>

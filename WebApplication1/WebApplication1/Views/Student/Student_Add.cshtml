@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using MySchoolWebApplication.ViewModels.StudentViewModel
+@model StudentAddFormModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center">
+	<h3>Add Student</h3>
+</div>
+
+<div class="row">
+	<div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+		<form asp-action="Student_Add" method="post">
+
+			<div class="mb-3">
+				<label asp-for="Name" class="form-label">Name</label>
+				<input asp-for="Name" class="form-control" aria-required="true"/>
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="Age" class="form-label">Age</label>
+				<input asp-for="Age" class="form-control" aria-required="true" />
+				<span asp-validation-for="Age" class="text-danger"></span>
+			</div>
+			
+			<div class="mb-3">
+				<label asp-for="CourseName" class="form-label">Course Name</label>
+				<input asp-for="CourseName" class="form-control" aria-required="true" />
+				<span asp-validation-for="CourseName" class="text-danger"></span>
+			</div>
+
+			<input class="btn btn-primary" type="submit" value="Add Student">
+		</form>
+	</div>
+</div>
+
+
+@section Scripts
+{
+	<partial name="_ValidationScriptsPartial" />
+}

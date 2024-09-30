@@ -21,7 +21,7 @@ static string Explosion(string? input)
         {
             resultString.Append(input[i]);
         }
-        else 
+        else
         {
             strength--;
         }
